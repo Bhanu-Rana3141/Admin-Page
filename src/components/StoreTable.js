@@ -1,6 +1,5 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
-import { FaRegHeart } from "react-icons/fa";
 
 export default function StoreTable() {
     return (

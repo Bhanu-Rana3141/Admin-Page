@@ -20,7 +20,7 @@ export default function DashboardGraphSection() {
                 <Link to=''><img className='graph-img' src={graphImage} alt="Graph"/></Link>
             </div>
 
-            <div className='months px-4'>
+            <div className='months'>
                 {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map(month => (
                     <div key={month}>{month}</div>
                 ))}

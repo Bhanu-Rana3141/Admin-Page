@@ -3,8 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { PiBellSimpleBold } from "react-icons/pi";
 import { RiUser6Line } from "react-icons/ri";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-                import { PiArrowCircleRightFill } from "react-icons/pi";
-
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +18,6 @@ export default function Header() {
 
     return (
         <Container fluid className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
-            
-            {/* SIDEBAR ARROW */}
-            <PiArrowCircleRightFill className='sidebar-arrow' />
-
             <Row className="justify-content-end align-items-center header-row">
                 <Col xs='auto' className='header-col-container'>
                     <div className='bell-icon-container'>

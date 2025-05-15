@@ -12,11 +12,11 @@ export default function MostUsedTemplates() {
     return (
         <Container fluid className='py-3 px-4'>
             <div className='most-used-template-container mb-4'>
-                <div className=''>Most Used Templates</div>
+                <div className='most-used-template-heading'>Most Used Templates</div>
                 <LuArrowUpDown className='up-down-arrow' />
             </div>
             <div className='template-card-container'>
-                <Row className='boot-row'>
+                <Row className='boot-row mb-3'>
                     <Col lg={3} md={4} sm={6} xs={8}>
                         <TemplateCard image={template1} heading='Design Store' />
                     </Col>
@@ -34,7 +34,6 @@ export default function MostUsedTemplates() {
                     </Col>
                 </Row>
             </div>
-
         </Container>
     )
 }

@@ -8,9 +8,9 @@ export default function TemplateCard({image, heading}) {
             <div className='used-templates-card'>
                 <Link to=''><img src={image}></img></Link>
                 <div className='template-card-text p-3'>
-                    <div className='card-text-color'>{heading}</div>
-                    <div className='card-text-color'>22 Stores Using</div>
-                    <div className='card-view'>
+                    <div className='card-text-color common-hover-effect'>{heading}</div>
+                    <div className='card-text-color common-hover-effect'>22 Stores Using</div>
+                    <div className='card-view common-hover-effect'>
                         <span>View</span>
                         <MdArrowOutward size={15} />
                     </div>

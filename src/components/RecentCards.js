@@ -5,7 +5,7 @@ export default function RecentCards({ heading }) {
     return (
         <>
             <div className="recent-card-container p-3">
-                <div className='recent-card-child mb-2'>
+                <div className='recent-card-child'>
                     <div className='card-heading'>{heading}</div>
                     <button className='this-week-btn btn-color'>
                         <span>This week</span>
@@ -33,7 +33,6 @@ export default function RecentCards({ heading }) {
                     <div className='recent-card-email'>james.bond@gmail.com</div>
                 </div>
             </div>
-
         </>
     )
 }

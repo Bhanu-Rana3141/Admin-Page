@@ -16,7 +16,7 @@
 
 .sidebar-logo {
     width: 100%;
-    padding: 11px 50px;
+    padding: 11px 35px;
     border-bottom: 1px solid #D9D9D9;
 }
 
@@ -33,23 +33,22 @@ ul {
     width: 100%;
     list-style: none;
     font-size: 14px;
-    padding: 24px 0 0 31px;
+    padding: 25px 0 0 35px;
 }
 
 .sidebar-links a {
     text-decoration: none;
     display: block;
     color: #7E78A1;
-    font-weight: 500;
-}
-
-.border-right {
-    border-right: 3px solid #00CCB4;
 }
 
 .sidebar-links .dashboard-link {
     color: #00CCB4;
     font-weight: 600;
+}
+
+.border-right {
+    border-right: 3px solid #00CCB4;
 }
 
 .links {
@@ -65,8 +64,7 @@ ul {
 
 .plus-icon {
     color: #00CCB4;
-    height: 34px;
-    width: 17px;
+    font-size: 22px;
 }
 
 /* MAIN CONTENT PARENT */
@@ -80,14 +78,6 @@ ul {
 /* HEADER */
 .header-row {
     padding: 11px 21px;
-}
-
-.sidebar-arrow {
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    font-size: 25px;
-    display: none;
 }
 
 .header-col-container {
@@ -108,7 +98,6 @@ ul {
 }
 
 .bell-icon-alert {
-    display: block;
     width: 7px;
     height: 7px;
     border: none;
@@ -140,13 +129,11 @@ ul {
 .admin-name {
     font-size: 14px;
     color: #230635;
-    font-weight: 500;
 }
 
 .admin-role {
     font-size: 12px;
     color: #7E78A1;
-    font-weight: 500;
 }
 
 .dropdown-arrow {
@@ -156,10 +143,9 @@ ul {
 .header-container {
     position: sticky;
     top: 0;
-    z-index: 1200;
     background-color: transparent;
     transition: all 0.3s ease;
-    padding-bottom: 2.5px;
+    padding-bottom: 12px;
 }
 
 .header-container.scrolled {
@@ -284,11 +270,10 @@ ul {
     display: flex;
     justify-content: space-between;
     color: #7E78A1;
-}
-
-.months div {
+    padding: 0 20px;
     cursor: pointer;
 }
+
 
 /* STORES */
 .store-container {
@@ -318,8 +303,7 @@ ul {
     color: #7E78A1;
 }
 
-.up-down-arrow,
-.view-all {
+.up-down-arrow, .view-all {
     color: #6F6AF8;
 }
 
@@ -343,8 +327,7 @@ ul {
 }
 
 /* TABLE  */
-thead,
-tbody {
+thead, tbody {
     font-size: 12px;
 }
 
@@ -359,7 +342,6 @@ tbody td.table-content {
     color: #230635;
     padding: 20px;
     border-bottom: 1px solid #D9D9D9;
-
 }
 
 tbody td.store-name {
@@ -370,31 +352,6 @@ tbody td.store-name {
 tbody tr:last-child td {
     border-bottom: none;
 }
-
-
-
-/* .store-users {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-.green-circle {
-    height: 6px;
-    width: 6px;
-    background-color: #00CCB4;
-    border-radius: 50%;
-}
-
-.store-likes {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-.heart-icon {
-    color: #FF5A5A;
-} */
 
 /* TOP PURCHASED PLANS */
 .purchased-plans1 {
@@ -417,6 +374,10 @@ tbody tr:last-child td {
     font-size: 12px;
 }
 
+.common-text {
+    margin-top: 9px;
+}
+
 .text1 {
     color: #6F6AF8;
 }
@@ -433,6 +394,7 @@ tbody tr:last-child td {
     position: absolute;
     top: 16px;
     right: 16px;
+    background-color: #FFFFFF;
 }
 
 /* PURCHASED PLAN2 */
@@ -445,11 +407,11 @@ tbody tr:last-child td {
 
 .box-container-common {
     color: #FFFFFF;
-    font-weight: 600;
     border-radius: 17px;
     display: flex;
-    gap: 30px;
     align-items: center;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 .box-container1 {
@@ -460,18 +422,13 @@ tbody tr:last-child td {
     background-color: #6F6AF8;
 }
 
-.hi-plus-icon-container {
-    height: 100px;
-    width: 70px;
-}
-
 .hi-plus-icon {
-    width: 100%;
-    height: 100%;
+    font-size: 40px;
 }
 
 .template-heading {
     font-size: 18px;
+    font-weight: 600;
 }
 
 .box-para {
@@ -498,7 +455,11 @@ tbody tr:last-child td {
 
 .btn-color {
     background-color: #FFFFFF;
-    padding: 6px 4px;
+    padding: 6px 8px;
+}
+
+.recent-card-child:first-child {
+    padding: 0;
 }
 
 .recent-card-email {
@@ -517,6 +478,7 @@ tbody tr:last-child td {
 .used-templates-card {
     font-size: 12px;
     background-color: #FFFFFF;
+    border-radius: 6px;
 }
 
 .used-templates-card img {
@@ -530,7 +492,10 @@ tbody tr:last-child td {
 
 .card-view {
     color: #6F6AF8;
-    font-weight: 500;
+}
+
+.template-card-text {
+    transition: background-color 0.4s ease-in-out;
 }
 
 .template-card-text:hover {
@@ -538,8 +503,7 @@ tbody tr:last-child td {
     background-color: #00CCB4;
 }
 
-.template-card-text:hover .card-text-color,
-.template-card-text:hover .card-view span {
+.template-card-text:hover .common-hover-effect {
     color: #FFFFFF;
 }
 
@@ -556,81 +520,75 @@ tbody tr:last-child td {
 }
 
 /* MEDIA QUERIES */
-@media(max-width : 992px) {
+@media(max-width : 1136px) {
+    .box-container-common {
+        padding: 26px;
+    }
+    .box-container-common {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1065px) {
+    .box-container-common {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .store-container {
+        font-size: 12px;
+    }
+}
+
+@media(max-width : 991.98px) {
+    .sidebar-container {
+        display: none;
+    }
+    .content-parent-container {
+        width: 100%;
+    }
+    .purchased-plans2 {
+        margin-top: 30px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
     .recent-card-container {
         margin-bottom: 20px;
     }
 }
 
-@media(max-width : 991px) {
-    .purchased-plans1 {
-        margin-bottom: 20px;
-    }
-
-    .purchased-plans2 {
-        flex-direction: row;
-    }
-
-    .box-container2 {
-        margin-left: 10px;
-    }
-}
-
-@media(max-width : 768px) {
-    .sidebar-container {
-        display: none;
-    }
-
-    .content-parent-container {
-        width: 100%;
-    }
-
-    .sidebar-arrow {
-        display: block;
-    }
-
+@media(max-width : 767.98px) {
     .store-container {
+        width: 100%;
         flex-direction: column;
     }
-
     .stores-container1 {
         width: 100%;
         justify-content: space-between;
     }
-
-    .top-visited-stores {
-        gap: 5px;
-    }
-
     .stores-container2 {
         width: 100%;
         justify-content: space-between;
         margin-top: 10px;
     }
-}
-
-@media(max-width: 500px) {
     .purchased-plans2 {
         flex-direction: column;
     }
-
-    .box-container1 {
-        margin-bottom: 10px;
-    }
-
-    .box-container2 {
-        margin-left: 0;
-    }
 }
 
-@media(max-width: 471px) {
+@media(max-width: 500px) {
     .text-container {
-        margin-top: 50px;
+        margin-top: 35px;
+    }
+    .common-text {
+        margin-top: 5px;
     }
 }
 
 @media(max-width: 411px) {
-    .months  {
-        font-size: 11px;
+    .months {
+        font-size: 12px;
+        padding: 0 8px;
     }
 }
