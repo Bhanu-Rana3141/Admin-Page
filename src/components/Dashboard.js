@@ -5,11 +5,11 @@ import DashboardGraphSection from './DashboardGraphSection';
 
 export default function Dashboard() {
     return (
-        <Container fluid className='p-4'>
+        <Container fluid>
             <h3 className='heading mb-3'>Dashboard</h3>
             <div className='dashboard-container'>
                 <Row>
-                    <Col lg={4} md={6} sm={12}>
+                    <Col lg={4} md={4} sm={12}>
                         <DashboardCard
                             amount="$10000"
                             label="Total Revenue"
@@ -18,7 +18,7 @@ export default function Dashboard() {
                             borderClass="green-border"
                         />
                     </Col>
-                    <Col lg={4} md={6} sm={12}>
+                    <Col lg={4} md={4} sm={12}>
                         <DashboardCard
                             amount="100"
                             label="Total Stores"
@@ -27,7 +27,7 @@ export default function Dashboard() {
                             borderClass="dark-nav-border"
                         />
                     </Col>
-                    <Col lg={4} md={6} sm={12}>
+                    <Col lg={4} md={4} sm={12}>
                         <DashboardCard
                             amount="1564"
                             label="Total Visitors"

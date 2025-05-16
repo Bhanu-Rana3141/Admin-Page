@@ -11,7 +11,7 @@ export default function DashboardCard({ amount, label, percentage, arrow = 'up',
                 <div className='total-revenue-text'>{label}</div>
             </div>
             <div className='progress-circle-container'>
-                <div className='progress-circle '>{percentage}</div>
+                <div className={`progress-circle ${arrow === 'down' ? 'red-border' : ''}`}>{percentage}</div>
                 <ArrowIcon className={`progress-circle-arrow ${arrow === 'down' ? 'red-circle' : ''}`} />
             </div>
         </div>

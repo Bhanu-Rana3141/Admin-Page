@@ -3,9 +3,21 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { PiBellSimpleBold } from "react-icons/pi";
 import { RiUser6Line } from "react-icons/ri";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-export default function Header() {
+export default function Header({ isSidebarOpen, toggleSidebar }) {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenu, setIsMobileMenu] = useState(window.innerWidth < 991.98);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileMenu(window.innerWidth < 991.98);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,7 +30,13 @@ export default function Header() {
 
     return (
         <Container fluid className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
-            <Row className="justify-content-end align-items-center header-row">
+            <Row className={`align-items-center header-row justify-content-end ${isMobileMenu ? 'justify-content-between' : ''} `}>
+                <Col xs='auto' className='d-lg-none'>
+                    <div onClick={toggleSidebar} className='hamburger-icon'>
+                        <GiHamburgerMenu size={24} />
+                    </div>
+                </Col>
+
                 <Col xs='auto' className='header-col-container'>
                     <div className='bell-icon-container'>
                         <PiBellSimpleBold className='bell-icon' />

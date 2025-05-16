@@ -5,7 +5,7 @@ import RecentCards from './RecentCards'
 export default function TopPurchasedCards() {
 
     return (
-        <Container fluid className='p-4'>
+        <Container fluid className='mt-5'>
             <Row>
                 <Col lg={4} md={6} sm={12}>
                     <RecentCards heading="Recent store owners" />

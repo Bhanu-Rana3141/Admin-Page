@@ -12,12 +12,29 @@
     left: 0;
     top: 0;
     border-right: 1px solid #D9D9D9;
+    z-index: 99999;
+    transition: transform 0.3s ease;
 }
 
 .sidebar-logo {
-    width: 100%;
-    padding: 11px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 40px;
     border-bottom: 1px solid #D9D9D9;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 11px 20px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.close-icon {
+    font-size: 40px;
+    color: #230635;
+    cursor: pointer;
 }
 
 .logo-img {
@@ -33,7 +50,7 @@ ul {
     width: 100%;
     list-style: none;
     font-size: 14px;
-    padding: 25px 0 0 35px;
+    padding: 25px 0 0 40px;
 }
 
 .sidebar-links a {
@@ -65,6 +82,15 @@ ul {
 .plus-icon {
     color: #00CCB4;
     font-size: 22px;
+}
+
+.hamburger-icon-container {
+    padding-left: 15px;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    color: #230635;
 }
 
 /* MAIN CONTENT PARENT */
@@ -145,7 +171,8 @@ ul {
     top: 0;
     background-color: transparent;
     transition: all 0.3s ease;
-    padding-bottom: 12px;
+    padding-bottom: 9px;
+    z-index: 9999;
 }
 
 .header-container.scrolled {
@@ -181,7 +208,7 @@ ul {
 }
 
 .dark-nav-border {
-    border-bottom: 3px solid #7E78A1;
+    border-bottom: 3px solid #94A6A412;
 }
 
 .total-revenue-price {
@@ -202,7 +229,7 @@ ul {
 .progress-circle {
     height: 65px;
     width: 65px;
-    border: 3px solid #00CCB4;
+    border: 3px solid #00CCB4;   
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -211,12 +238,12 @@ ul {
     font-weight: 600;
 }
 
-.progress-circle-arrow {
-    color: #00CCB4;
+.red-border {
+    border: 3px solid #FF5A5A;
 }
 
-.dark-nav-text {
-    color: #7E78A1;
+.progress-circle-arrow {
+    color: #00CCB4;
 }
 
 .red-circle {
@@ -274,7 +301,6 @@ ul {
     cursor: pointer;
 }
 
-
 /* STORES */
 .store-container {
     font-size: 14px;
@@ -303,7 +329,8 @@ ul {
     color: #7E78A1;
 }
 
-.up-down-arrow, .view-all {
+.up-down-arrow,
+.view-all {
     color: #6F6AF8;
 }
 
@@ -327,7 +354,8 @@ ul {
 }
 
 /* TABLE  */
-thead, tbody {
+thead,
+tbody {
     font-size: 12px;
 }
 
@@ -338,19 +366,44 @@ thead th.t-heading {
     border-bottom: 1px solid #D9D9D9;
 }
 
-tbody td.table-content {
-    color: #230635;
-    padding: 20px;
-    border-bottom: 1px solid #D9D9D9;
-}
-
 tbody td.store-name {
     color: #00CCB4;
     font-weight: 600;
 }
 
-tbody tr:last-child td {
+td.table-content {
+    color: #230635;
+    padding: 20px;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.32);
+}
+
+td.table-content span {
+    color: #7E78A1;
+}
+
+tr:last-child td {
     border-bottom: none;
+}
+
+.puma-nike-bg td {
+    opacity: 0.2;
+}
+
+td .green-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #00CCB4;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 1px;
+}
+
+.red-heart {
+    color: #FF5A5A;
+    width: 20px;
+    height: 14px;
+    margin-bottom: 1px;
 }
 
 /* TOP PURCHASED PLANS */
@@ -410,7 +463,8 @@ tbody tr:last-child td {
     border-radius: 17px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     padding: 30px;
 }
 
@@ -512,26 +566,33 @@ tbody tr:last-child td {
 }
 
 .template-card-container {
-    overflow-x: auto;
+    overflow-x: scroll;
+}
+
+.template-card-container::-webkit-scrollbar {
+    height: 8px;               
+}
+
+.template-card-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
 }
 
 .boot-row {
+    display: flex;
     flex-wrap: nowrap;
 }
 
 /* MEDIA QUERIES */
-@media(max-width : 1136px) {
+@media(max-width : 1208px) {
     .box-container-common {
         padding: 26px;
     }
-    .box-container-common {
-        gap: 20px;
-    }
 }
 
-@media(max-width: 1065px) {
+@media(max-width: 1070px) {
     .box-container-common {
-        padding: 20px;
+        padding: 19px;
     }
 }
 
@@ -543,52 +604,111 @@ tbody tr:last-child td {
 
 @media(max-width : 991.98px) {
     .sidebar-container {
-        display: none;
+        transform: translateX(-100%);
     }
+
+    .sidebar-container.show-sidebar {
+        transform: translateX(0);
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar-logo {
+        gap: 10px;
+    }
+
     .content-parent-container {
         width: 100%;
     }
+
     .purchased-plans2 {
-        margin-top: 30px;
+        gap: 20px;
         flex-direction: row;
-        justify-content: space-evenly;
     }
+    .box-container-common {
+        width: 49%;
+        margin-top: 20px;
+    }
+
     .recent-card-container {
         margin-bottom: 20px;
     }
 }
 
 @media(max-width : 767.98px) {
+    .stores-container1 {
+        gap: 15px;
+    }
+
+    .top-visited-stores {
+        gap: 5px;
+    }
+
+    .stores-container2 {
+        gap: 15px;
+    }
+}
+
+@media(max-width : 667px) {
     .store-container {
         width: 100%;
         flex-direction: column;
     }
+
     .stores-container1 {
         width: 100%;
         justify-content: space-between;
     }
+
     .stores-container2 {
         width: 100%;
         justify-content: space-between;
-        margin-top: 10px;
+        margin-top: 15px;
     }
+}
+
+@media(max-width : 592px) {
     .purchased-plans2 {
         flex-direction: column;
+        gap: 0;
+    }
+
+    .box-container-common {
+        width: 100%;
+        justify-content: start;
+        gap: 40px;
     }
 }
 
 @media(max-width: 500px) {
+    .bell-icon-container {
+        margin-right: 10px;
+    }
+
     .text-container {
         margin-top: 35px;
     }
+
     .common-text {
         margin-top: 5px;
     }
 }
 
+@media(max-width : 422px) {
+    .store-container, .store-container-btn  {
+        font-size: 11px;
+    }
+
+    .top-visited-stores {
+        gap: 0;
+    }
+    .store-container-arrow {
+        font-size: 15px;
+    }
+}
+
 @media(max-width: 411px) {
     .months {
-        font-size: 12px;
-        padding: 0 8px;
+        font-size: 11px;
+        padding: 0 5px;
     }
 }

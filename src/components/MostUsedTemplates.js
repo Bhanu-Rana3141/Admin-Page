@@ -10,7 +10,7 @@ import template5 from '../assests/images/template5.png'
 
 export default function MostUsedTemplates() {
     return (
-        <Container fluid className='py-3 px-4'>
+        <Container fluid className='mt-5'>
             <div className='most-used-template-container mb-4'>
                 <div className='most-used-template-heading'>Most Used Templates</div>
                 <LuArrowUpDown className='up-down-arrow' />

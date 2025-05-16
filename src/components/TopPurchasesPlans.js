@@ -6,10 +6,10 @@ import { MdOutlineArrowDropDown } from 'react-icons/md';
 
 export default function TopPurchasesPlans() {
     return (
-        <Container fluid className='p-4'>
+        <Container fluid className='mt-4'>
             <h3 className='heading mb-3'>Top Purchased Plans</h3>
             <Row className='py-2'>
-                <Col lg={7} md={12} sm={12}>
+                <Col lg={7} >
                     <div className='purchased-plans1 p-3'>
                         <div className='circles-container'>
                             <img src={circle} alt='circle'></img>
@@ -29,7 +29,7 @@ export default function TopPurchasesPlans() {
                     </div>
                 </Col>
 
-                <Col lg={5} md={12} sm={12}>
+                <Col lg={5} >
                     <div className='purchased-plans2'>
                         <div className='box-container-common box-container1'>
                             <HiPlus className='hi-plus-icon' />

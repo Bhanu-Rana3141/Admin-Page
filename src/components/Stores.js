@@ -7,7 +7,7 @@ import StoreTable from './StoreTable';
 export default function Stores() {
     return (
         <>
-            <Container fluid className='p-4'>
+            <Container fluid className='mt-5'>
                 <h3 className='heading mb-3'>Stores</h3>
                 <Row>
                     <div className='store-container'>
@@ -15,22 +15,22 @@ export default function Stores() {
                             <div className='stores-container1'>
                                 <div className='top-visited-stores first-div'>
                                     <span>Top Visited Stores</span>
-                                    <LuArrowUpDown className='up-down-arrow' />
+                                    <LuArrowUpDown className='up-down-arrow store-container-arrow' />
                                 </div>
                                 <div className='top-visited-stores second-div'>
                                     <span>Top performing Stores</span>
-                                    <LuArrowUpDown className='up-down-arrow' />
+                                    <LuArrowUpDown className='up-down-arrow store-container-arrow' />
                                 </div>
                                 <div className='top-visited-stores second-div'>
                                     <span>Recently added Stores</span>
-                                    <LuArrowUpDown className='up-down-arrow' />
+                                    <LuArrowUpDown className='up-down-arrow store-container-arrow' />
                                 </div>
                             </div>
                         </Col>
                         <Col md={3}>
                             <div className='stores-container2'>
                                 <div className='view-all'>View All</div>
-                                <button className='this-week-btn'>
+                                <button className='this-week-btn store-container-btn'>
                                     <span>This week</span>
                                     <MdOutlineArrowDropDown size={20} className='this-week-arrow' />
                                 </button>
@@ -39,7 +39,7 @@ export default function Stores() {
                     </div>
                 </Row>
 
-                <Row className='mt-4'>
+                <Row className='mt-3'>
                     <Col md={12}>
                         <StoreTable />
                     </Col>
